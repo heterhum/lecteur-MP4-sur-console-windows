@@ -3,13 +3,6 @@ import csv
 import glob
 from tqdm.auto import tqdm
 
-def complement(x):
-    if x>128:
-        x = 255
-    else:
-        x = 0
-    return x
-
 def symbolen(nombre,symbole1,symbole2,symbole3,symbole4):
     if nombre<=255 and nombre>191:
         return symbole1
@@ -46,7 +39,6 @@ def csvwrite(fichiercsv,extention,symbole1,symbole2,symbole3,symbole4,longueur,h
             impix = img.load()
             for colonne in range(img.size[1]):
                 for ligne in range(img.size[0]):
-                    #impix[ligne,colonne] = complement(impix[ligne,colonne])
                     t.append(symbolen(impix[ligne,colonne],symbole1,symbole2,symbole3,symbole4))
                     
                 y.append(" ".join(t))
