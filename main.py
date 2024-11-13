@@ -5,9 +5,9 @@ from csvcreate import csvwrite,effcsv
 import os
 
 
-video='bad-apple!!/Rick_Roll.mp4' #path to your mp4
-path_to_folder='bad-apple!!/imgfolder'
-path_to_csv='bad-apple!!/img.csv'
+video='.../Rick_Roll.mp4' #path to your mp4
+path_to_folder='.../imgfolder'
+path_to_csv='.../img.csv'
 wanted_fps=15
 extention=".jpeg" 
 symbole1="?"
