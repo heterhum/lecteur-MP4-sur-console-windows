@@ -5,23 +5,25 @@ from csvcreate import csvwrite,effcsv
 import os
 
 
-video='C:/Users/xoxar/Desktop/perso/code/bad-apple!!/Rick_Roll.mp4'
-path_to_folder='C:/Users/xoxar/Desktop/perso/code/bad-apple!!/imgfolder'
-path_to_csv='C:/Users/xoxar/Desktop/perso/code/bad-apple!!/img.csv'
+video='bad-apple!!/Rick_Roll.mp4' #path to your mp4
+path_to_folder='bad-apple!!/imgfolder'
+path_to_csv='bad-apple!!/img.csv'
 wanted_fps=15
-extention=".jpeg"
-symbole1=" "
-symbole2="#"
-longueur=150
-hauteur=84
-action=int(input())
+extention=".jpeg" 
+symbole1="?"
+symbole2="@"
+symbole3="%"
+symbole4="$"
+longueur=150*2
+hauteur=84*2
+action=int(input("choose your action :"))
 
 def read(path_to_csv):
     with open(path_to_csv) as csvfile:
         spamreader = csv.reader(csvfile)
         for row in spamreader:
             print("".join(row))
-            time.sleep(0.06)
+            time.sleep(1/wanted_fps)
             #os.system("cls || clear")
 
 
@@ -30,7 +32,7 @@ if action==0:
     print("vidéo -> image, finie")
     n=input("Appuyez pour continuer ...")
 
-    csvwrite(path_to_csv,extention,symbole1,symbole2,longueur,hauteur)
+    csvwrite(path_to_csv,extention,symbole1,symbole2,symbole3,symbole4,longueur,hauteur)
     print("image -> csv, finie")
     n=input("Appuyez pour continuer ...")
 
